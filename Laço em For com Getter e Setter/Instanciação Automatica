@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+
+namespace Hello
+{
+    class Pessoa
+    {
+        public string Name// property
+        { get; set; }
+        public int Idade
+        { get; set; }
+    }
+    class HelloWorld
+    {
+        public static void Main(string[] args)
+        {
+            int j = 0;
+            List<Pessoa> pessoas = new List<Pessoa>();
+            for (int i = 0; i < 5; i++)
+            {
+                pessoas.Add(new Pessoa());
+                Console.WriteLine("Escreva seu nome: ");
+                pessoas[j].Name = Console.ReadLine();
+                Console.WriteLine("Escreva sua idade: ");
+                pessoas[j].Idade = Convert.ToInt32(Console.ReadLine());
+                j++;
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"Ola {pessoas[i].Name}! Sua idade atual eh de {pessoas[i].Idade}.");
+            }
+        }
+    }
+}
