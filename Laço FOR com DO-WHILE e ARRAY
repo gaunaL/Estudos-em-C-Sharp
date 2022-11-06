@@ -1,0 +1,131 @@
+using System;
+
+ 
+
+public class HelloWorld
+
+{
+
+    public static void Main(string[] args)
+
+    {
+
+       
+
+        string[] nome = new string[5];
+
+        int escolha;
+
+        Console.WriteLine ("Iremos cadastrar 5 nomes: ");
+
+        for (int i = 0; i < nome.Length; i++)
+
+        {
+
+            Console.WriteLine ("Escreva um nome: ");
+
+            nome[i] = Console.ReadLine();
+
+            new Pessoa() {Nome=nome[i]};
+
+        }
+
+       
+
+        Console.WriteLine("Qual a sua idade? ");
+
+        int idade = Convert.ToInt32(Console.ReadLine());
+
+        if (idade < 4)
+
+        {
+
+            Console.WriteLine("Vc eh um baby");
+
+        }
+
+        else if (idade < 12)
+
+        {
+
+            Console.WriteLine("Vc eh uma crianca");
+
+        }
+
+        else if (idade < 18)
+
+        {
+
+            Console.WriteLine("Vc eh um adolescente");
+
+        }
+
+        else if (idade > 19 && idade < 59)
+
+        {
+
+            Console.WriteLine("Vc eh um adulto");
+
+        }
+
+        else
+
+        {
+
+            Console.WriteLine("Vc eh um idoso");
+
+        }
+
+        do
+
+        {
+
+        Console.WriteLine("Deseja exibir algum nome cadastrado? Digite 1 para sim e 2 para nao. ");
+
+        escolha = Convert.ToInt32(Console.ReadLine());
+
+       
+
+        switch (escolha)
+
+        {
+
+            case 1:
+
+                Console.WriteLine("Escolha um numero do vetor: ");
+
+                int vetor = Convert.ToInt32(Console.ReadLine());
+
+                if (vetor < 0)
+
+                {
+
+                    Console.WriteLine("Numero incorreto, refazer");
+
+                }
+
+                else
+
+                {
+
+                Console.WriteLine("O nome eh: " + nome[vetor]);
+
+                }
+
+                break;
+
+            default:
+
+                Console.WriteLine("Obrigado por usar");
+
+                break;
+
+        }
+
+        }
+
+        while (escolha == 1);
+
+    }
+
+}
